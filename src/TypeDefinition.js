@@ -413,7 +413,16 @@ export type NavigationDrawerScreenOptions = {|
 /**
  * Event subscription setter
  */
+
+export type NavigationEventType =
+  | 'action'
+  | 'willFocus'
+  | 'didFocus'
+  | 'willBlur'
+  | 'didBlur';
+
 export type NavigationEventPayload = {|
+  +type: NavigationEventType,
   +state: NavigationState,
   +lastState: NavigationState,
   +action: NavigationAction,
